@@ -167,9 +167,11 @@ function Header() {
 }
 function Footer() {
   return (
-    <div style={{ textAlign: "center", marginBottom: 25 }}>
+    <footer>
       <p>Hope you enjoy our best movies </p>
-    </div>
+      <br />
+      <hr />
+    </footer>
   );
 }
 function CardMovie({ movieObj }) {
@@ -213,9 +215,27 @@ function CardMovie({ movieObj }) {
           </span>
         </div>
       </div>
+      <div className="button-style">
+        <Button play={movieRating} />
+      </div>
     </div>
   );
 }
+function Button({ play }) {
+  // console.log(play);
+  return (
+    <>
+      {play >= 2 ? (
+        <button type="button">Play</button>
+      ) : (
+        <button type="button" disabled>
+          Play
+        </button>
+      )}
+    </>
+  );
+}
+
 function Stars({ stars }) {
   const starImages = [];
   for (let index = 1; index < stars; index++) {
@@ -237,6 +257,7 @@ function MovieTags({ tags }) {
           backgroundColor: `${backgroundColor}`,
           marginRight: 10,
           padding: 8,
+          borderRadius: "10px",
         }}
       >
         {tags}

@@ -41,10 +41,11 @@ h4{
 }
 .card-item{
   width: 350px;
-  padding: 20px;
   margin: 20px 50px;
   background-color: rgb(255, 255, 255);
   border: 2px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .rating-container{
   display: flex;
@@ -60,4 +61,34 @@ h4{
   margin-top: 10px;
   margin-bottom: 10px;
   color: #ffffff;
+}
+footer{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.598);
+  padding: 30px;
+}
+footer>p{
+  font-size: 24px;
+  color: #ffffff;
+}
+
+Button{
+  font-size: 24px;
+  padding: 0 148px;
+  background-color: transparent;
+  /* tắt viền outline button */
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+Button:hover{
+  color: black;
+}
+.button-style{
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(255, 0, 0);
 }
